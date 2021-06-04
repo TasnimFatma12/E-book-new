@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ebook/Action</title>
+
+	<style>
+
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		
+		.action{
+			width: 100%;;
+			background-color: #F6F8FC;
+			background-size: cover;
+			min-height: 100vh;
+		}
+		.row{
+			display: flex;
+			width: 100%;
+			height: auto;
+		}
+		.bg{
+			width: 50%;
+			height: auto;
+		}
+		.bg img{
+            width: 100%;
+            height: 124%;
+            border-right: 1px solid black;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+		}
+
+		#hide{
+			display: none;
+		}
+		.text{
+			width: 50%;
+			height: auto;
+			text-align: center;
+		}
+
+		.text h1{
+			padding-top: 160px;
+			font-size: 48px;
+			font-style: italic;
+		}/*
+		.text a:hover{
+			text-decoration: none;
+
+		}*/
+
+		.text button{
+			margin-top: 30px;
+			padding: 12px 50px;
+			font-size: 20px;
+			border: none;
+			background: #77d496;
+			color: #fff;
+			border-radius: 12px;
+			cursor: pointer;
+		}
+		.text button:hover{
+			background: #50C878;
+		}
+
+		@media (max-width: 700px){
+			.action{
+				padding-bottom: 30px;
+			}
+			.row{
+				flex-direction: column;
+			}
+
+			.bg img{
+            width: 99%;
+            height: 100%;
+            border-top-right-radius: 0%;
+            border-bottom-right-radius: 0%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+		}
+		.bg{
+			width: 100%;
+		}
+		.text h1{
+			font-size: 30px;
+		}
+		.text{
+			width: 100%;
+		}
+		}
+	</style>
+</head>
+<body>
+
+
+	<section class="action">
+		
+		<div class="row">
+			
+			<div class="bg" id="videoPlayer">
+				<img src="bg.webp" id="show">
+				<img src="black.webp" id="hide">
+			</div>
+
+			<div class="text">
+				<h1>"Many Companies promote CTAs<br> to grow their email database and<br> expand their list of Contacts"</h1>
+				  <button onclick="here()">Click Here</button>
+			</div>
+		</div>
+	</section>
+
+
+	<script>
+
+
+		var videoPlayer = document.getElementById("videoPlayer");
+var show = document.getElementById("show");
+var hide = document.getElementById("hide");
+
+// function stopVideo() {
+	  
+//      show.style.display = "none";
+
+// }
+
+
+function here(file) {
+	  show.style.display = "none";
+	  // show.src = file;
+     hide.style.display = "block";
+
+}
+	</script>
+
+</body>
+</html>
